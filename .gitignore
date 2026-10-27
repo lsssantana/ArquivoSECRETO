@@ -1,0 +1,6 @@
+.env
+*.token
+tokens*.json
+__pycache__/
+*.mp4
+*.mov
