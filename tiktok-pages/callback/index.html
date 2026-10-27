@@ -1,0 +1,11 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autorização | Arquivopost</title><link rel="stylesheet" href="../style.css"></head><body><main>
+<h1>Autorização recebida</h1>
+<p>Copie o código abaixo e cole no terminal do Arquivopost. Não compartilhe com ninguém.</p>
+<p><textarea id="code" rows="4" style="width:100%" readonly></textarea></p>
+<p id="err" class="muted"></p>
+<script>
+var p=new URLSearchParams(location.search);
+if(p.get("code")){document.getElementById("code").value=p.get("code");}
+else{document.getElementById("err").textContent="Nenhum código na URL"+(p.get("error")?": "+p.get("error"):"")+".";}
+</script>
+</main></body></html>
